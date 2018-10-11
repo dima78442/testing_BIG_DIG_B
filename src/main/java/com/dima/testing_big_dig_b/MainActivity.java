@@ -10,7 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import android.widget.Toast;
+
+import com.dima.testing_big_dig_b.SwitcherPac.Switcher;
 
 public class MainActivity extends Activity {
 
@@ -28,8 +29,8 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int res1 = Switcher.Switcher(this);
-        Toast.makeText(this,res1+"",Toast.LENGTH_LONG).show();
+        Switcher switcher = new Switcher(this);
+        switcher.starter();
         Cursor cursor = getContentResolver().query(DATA_URI, null, null,
                 null, null);
         startManagingCursor(cursor);
