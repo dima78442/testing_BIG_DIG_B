@@ -12,11 +12,9 @@ public class FromLauncher {
     }
 
     public void starter (){
-
         FragmentManager fm = activity.getFragmentManager();
         DialogCountDown dialogFragment = new DialogCountDown ();
         dialogFragment.show(fm, "Fragment");
-
     }
 }
 
