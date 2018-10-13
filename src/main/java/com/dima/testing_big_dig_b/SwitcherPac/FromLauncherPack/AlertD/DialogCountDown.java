@@ -32,10 +32,11 @@ public class DialogCountDown extends DialogFragment {
          button.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
+
                  getActivity().finishAffinity();
              }
          });
-         new CountDownTimer(11000, 1000) {
+         final CountDownTimer countDownTimer = new CountDownTimer(11000, 1000) {
 
              public void onTick(long millisUntilFinished) {
                  text.setText("not an independent application, will be closed in: " + millisUntilFinished / 1000);
@@ -44,6 +45,14 @@ public class DialogCountDown extends DialogFragment {
                  getActivity().finishAffinity();;
              }
          }.start();
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                countDownTimer.cancel();
+                getActivity().finishAffinity();
+            }
+        });
     }
 
 }

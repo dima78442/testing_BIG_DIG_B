@@ -1,6 +1,8 @@
 package com.dima.testing_big_dig_b.SwitcherPac.FromHistoryTab.HistoryStatus1;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
 
 import com.dima.testing_big_dig_b.Presenter.Presenter;
 import com.dima.testing_big_dig_b.SwitcherPac.PicassoDev.PicassoAction;
@@ -8,7 +10,7 @@ import com.squareup.picasso.Callback;
 
 public class HistoryStatusOne {
     private Activity activity;
-    private int id;
+    static public int id;
     private String url;
     private PicassoAction picassoAction;
     Presenter presenter;
@@ -29,7 +31,11 @@ public class HistoryStatusOne {
         return new Callback() {
             @Override
             public void onSuccess() {
-                presenter.Deleate(id);
+                //presenter.Deleate(id);
+                Intent startIntent = new Intent(activity.getApplicationContext(), DelService.class);
+                Log.d("DEL",id +"");
+                startIntent.putExtra("id",id);
+                activity.startService(startIntent);
             }
 
             @Override
