@@ -27,4 +27,5 @@ public class Presenter {
     public Cursor Query(){
         return dbUri.onClickQuery();
     }
+
 }
