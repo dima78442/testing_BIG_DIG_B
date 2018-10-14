@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 public class IntentGetter {
+
     private static String FROM = "";
     private static String URL = "";
     private static String TIME = "";
@@ -12,8 +13,10 @@ public class IntentGetter {
     private static int ID = -1;
 
     public static void create(Activity activity){
+
         Intent intent = activity.getIntent();
         Bundle bundle = intent.getBundleExtra("Reference");
+
         if(bundle!= null){
             FROM = bundle.getString("from");
             URL = bundle.getString("url");

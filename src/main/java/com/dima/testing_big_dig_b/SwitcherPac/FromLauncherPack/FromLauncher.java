@@ -6,7 +6,9 @@ import android.app.FragmentManager;
 import com.dima.testing_big_dig_b.SwitcherPac.FromLauncherPack.AlertD.DialogCountDown;
 
 public class FromLauncher {
+
     private Activity activity;
+
     public FromLauncher(Activity activity) {
         this.activity = activity;
     }

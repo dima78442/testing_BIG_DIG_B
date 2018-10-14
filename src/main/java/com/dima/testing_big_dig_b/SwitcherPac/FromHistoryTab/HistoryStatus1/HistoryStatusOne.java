@@ -9,6 +9,7 @@ import com.dima.testing_big_dig_b.SwitcherPac.PicassoDev.PicassoAction;
 import com.squareup.picasso.Callback;
 
 public class HistoryStatusOne {
+
     private Activity activity;
     static public int id;
     private String url;
