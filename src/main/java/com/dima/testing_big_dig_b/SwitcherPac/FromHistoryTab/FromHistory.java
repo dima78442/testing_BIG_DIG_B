@@ -7,6 +7,7 @@ import com.dima.testing_big_dig_b.SwitcherPac.FromHistoryTab.HistoryStatus2_3.Hi
 import com.dima.testing_big_dig_b.SwitcherPac.IntentGetter;
 
 public class FromHistory {
+
     Activity activity;
 
     public FromHistory(Activity activity) {
